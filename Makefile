@@ -1,3 +1,3 @@
 default:
-	chmod 777 ./install.sh && ./install.sh
+	chmod 777 ./setup/install.sh && ./setup/install.sh
 
