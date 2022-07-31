@@ -9,4 +9,4 @@ else
 	echo "Vundle already installed"
 fi
 echo "Installing Modules..."
-vim +PluginInstall +qall
+nvim +PluginInstall +qall
