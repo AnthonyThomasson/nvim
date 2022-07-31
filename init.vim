@@ -21,6 +21,13 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-commentary'
 Plugin 'kien/ctrlp.vim'
 
+" javascript
+Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -36,6 +43,9 @@ endif
 
 let g:startify_custom_header =
        \ startify#pad(split(system("figlet -w 100 \"Tony's VIM\""), '\n'))
+
+" CoC extensions
+let g:coc_global_extensions = ['coc-tsserver']
 
 " NERDTree Config
 nmap <S-Tab> :NERDTreeToggle<CR>
