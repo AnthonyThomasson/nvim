@@ -19,6 +19,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-commentary'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +37,8 @@ endif
 let g:startify_custom_header =
        \ startify#pad(split(system("figlet -w 100 \"Tony's VIM\""), '\n'))
 
-
-
 " NERDTree Config
 nmap <S-Tab> :NERDTreeToggle<CR>
+
+" quick escape from terminal
+tnoremap <Esc> <C-\><C-n>
