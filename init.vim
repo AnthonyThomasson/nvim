@@ -12,7 +12,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'mhinz/vim-startify'
+Plugin 'preservim/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,3 +32,11 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+let g:startify_custom_header =
+       \ startify#pad(split(system("figlet -w 100 \"Tony's VIM\""), '\n'))
+
+
+
+" NERDTree Config
+nmap <S-Tab> :NERDTreeToggle<CR>
